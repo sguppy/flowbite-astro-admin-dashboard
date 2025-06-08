@@ -3,6 +3,7 @@ import pkg from '../../package.json' assert { type: 'json' };
 import { url } from '../lib/data.js';
 
 import { SITE_TITLE } from './constants.js';
+import { PWA } from "webapp-astro-pwa";
 
 const { class: clazz } = Astro.props;
 ---
@@ -23,6 +24,7 @@ const { class: clazz } = Astro.props;
 			type="application/xml"
 			href={url('sitemap-index.xml')}
 		/>
+		<PWA />
 
 		<meta
 			name="author"
